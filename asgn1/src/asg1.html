@@ -1,0 +1,126 @@
+<h2>Assignment 1: Painting</h2>
+
+<p><strong>Name:</strong> Jun Martin Santos</p>
+<p><strong>Email:</strong> juansant@ucsc.edu</p>
+
+<p><strong>Notes to grader:</strong> This project includes a simple painting application with multiple shape options and a triangle-based boat drawing rendered using WebGL.
+</p>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 1: Painting</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 18px;
+        }
+
+        canvas {
+            display: block;
+            background: black;
+            border: 1px solid #000;
+            margin-bottom: 18px;
+        }
+
+        .controls {
+            width: 620px;
+        }
+
+        .row {
+            margin: 16px 0;
+        }
+
+        .mode-buttons button {
+            margin-right: 6px;
+        }
+
+        .slider-line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 0;
+            flex-wrap: wrap;
+        }
+
+        .label {
+            display: inline-block;
+            min-width: 60px;
+        }
+        
+        .small-label {
+            display: inline-block;
+            min-width: 42px;
+        }
+
+        .medium-label {
+            display: inline-block;
+            min-width: 110px;
+        }
+
+        .long-label {
+            display: inline-block;
+            min-width: 155px;
+        }
+
+        input[type="range"] {
+            width: 120px;
+            vertical-align: middle;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        strong {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+        Please use a browser that supports "canvas"
+    </canvas>
+
+    <div class="controls">
+        <div class="row">
+            <button id="clearButton">Clear Canvas</button>
+            <button onclick="drawMyPicture()">Draw Picture</button>
+        </div>
+
+        <div class="row">
+            <strong>Drawing Mode:</strong><br>
+            <button id="pointButton">Squares</button>
+            <button id="triangleButton">Triangles</button>
+            <button id="circleButton">Circles</button>
+        </div>
+
+        <div class="row">
+            <strong>Shape Color:</strong><br>
+            <span class="label">Red</span>
+            <input type="range" id="redSlider" min="0" max="100" value="100">
+
+            <span class="label">Green</span>
+            <input type="range" id="greenSlider" min="0" max="100" value="100">
+
+            <span class="label">Blue</span>
+            <input type="range" id="blueSlider" min="0" max="100" value="100">
+        </div>
+
+        <div class="row">
+            <span class="label">Shape Size:</span>
+            <input type="range" id="sizeSlider" min="1" max="50" value="10">
+
+            <span class="label">(Circles) Segment Count:</span>
+            <input type="range" id="segmentSlider" min="3" max="20" value="10">
+        </div>
+    </div>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+    <script src="asg1.js"></script>
+</body>
+</html>
