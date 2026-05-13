@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Blocky Turtle</title>
+</head>
+
+<body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+        Please use a browser that supports canvas.
+    </canvas>
+
+    <p id="performanceText">ms: -- fps: --</p>
+
+<hr>
+
+<h3>Animation</h3>
+
+    <p>
+        <button id="animationOnButton">Animation On</button>
+        <button id="animationOffButton">Animation Off</button>
+    </p>
+<hr>
+
+<h3>Camera</h3>
+
+<p>
+  Camera X Angle
+  <input type="range" min="-360" max="360" value="0" id="cameraXSlide">
+</p>
+
+<p>
+  Camera Y Angle
+  <input type="range" min="-360" max="360" value="0" id="cameraYSlide">
+</p>
+
+<hr>
+
+<h3>Tail</h3>
+
+<p>
+  Tail Angle
+  <input type="range" min="-45" max="45" value="0" id="tailSlide">
+</p>
+
+<hr>
+
+<h3>Leg Joints</h3>
+
+<p>
+  Left Front Leg
+  <input type="range" min="-45" max="45" value="0" id="leftFrontLegSlide">
+</p>
+
+<p>
+  Right Front Leg
+  <input type="range" min="-45" max="45" value="0" id="rightFrontLegSlide">
+</p>
+
+<p>
+  Left Back Leg
+  <input type="range" min="-45" max="45" value="0" id="leftBackLegSlide">
+</p>
+
+<p>
+  Right Back Leg
+  <input type="range" min="-45" max="45" value="0" id="rightBackLegSlide">
+</p>
+
+<hr>
+
+<h3>Knee Joints</h3>
+
+<p>
+  Left Front Knee
+  <input type="range" min="-45" max="45" value="0" id="leftFrontKneeSlide">
+</p>
+
+<p>
+  Right Front Knee
+  <input type="range" min="-45" max="45" value="0" id="rightFrontKneeSlide">
+</p>
+
+<p>
+  Left Back Knee
+  <input type="range" min="-45" max="45" value="0" id="leftBackKneeSlide">
+</p>
+
+<p>
+  Right Back Knee
+  <input type="range" min="-45" max="45" value="0" id="rightBackKneeSlide">
+</p>
+
+<hr>
+
+<h3>Foot Joints</h3>
+
+<p>
+  Left Front Foot
+  <input type="range" min="-45" max="45" value="0" id="leftFrontFootSlide">
+</p>
+
+<p>
+  Right Front Foot
+  <input type="range" min="-45" max="45" value="0" id="rightFrontFootSlide">
+</p>
+
+<p>
+  Left Back Foot
+  <input type="range" min="-45" max="45" value="0" id="leftBackFootSlide">
+</p>
+
+<p>
+  Right Back Foot
+  <input type="range" min="-45" max="45" value="0" id="rightBackFootSlide">
+</p>
+
+    <script src="webgl-utils.js"></script>
+    <script src="webgl-debug.js"></script>
+    <script src="cuon-utils.js"></script>
+    <script src="cuon-matrix.js"></script>
+
+    <script src="BlockyAnimal.js"></script>
+</body>
+</html>

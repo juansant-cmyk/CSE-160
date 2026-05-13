@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 3 - Virtual World</title>
+    <style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: black;
+    }
+
+    #controls {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+        padding: 10px 14px;
+
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+
+        font-family: Arial;
+        font-size: 14px;
+
+        border-radius: 8px;
+
+        z-index: 10;
+    }
+
+    canvas {
+        display: block;
+    }
+    #gameContainer {
+        position: relative;
+        width: 800px;
+        height: 600px;
+    }
+
+    #gamePopup {
+        position: absolute;
+
+        top: 50px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+
+        padding: 14px 24px;
+
+        border-radius: 12px;
+
+        font-size: 24px;
+        font-family: Arial;
+
+        z-index: 20;
+
+        pointer-events: none;
+
+        opacity: 0;
+
+        transition: opacity 1.5s ease;
+    }
+
+    #coinHUD {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+
+        background: rgba(0, 0, 0, 0.65);
+        color: white;
+
+        padding: 12px 18px;
+        border-radius: 10px;
+
+        font-family: Arial;
+        font-size: 20px;
+
+        z-index: 20;
+        pointer-events: none;
+    }
+    </style>
+</head>
+
+<body onload="main()">
+    <div id="controls">
+    <b>Controls</b><br>
+
+    W / A / S / D → Move<br>
+    Q / E → Pan Left/Right<br>
+
+   C → Toggle Creative / Normal Mode<br>
+    F → Add Block (Creative Only)<br>
+    R → Delete Block (Creative Only)<br>
+    Space / Shift → Fly Up/Down (Creative Only)<br>
+
+    Left Click / M → Toggle Mouse Camera<br>
+    ESC → Exit Mouse Camera
+
+    </div>
+    <div id="gameContainer">
+        <div id="gamePopup">Collect all 10 coins to win!</div>
+
+        <div id="coinHUD">
+            Coins: <span id="coinScore">0</span>/10
+        </div>
+
+        <canvas id="webgl" width="800" height="600">
+            Please use a browser that supports canvas.
+        </canvas>
+    </div>
+
+    <p>WASD = move, Q/E = rotate</p>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+
+    <script src="camera.js"></script>
+    <script src="cube.js"></script>
+    <script src="asgn3.js"></script>
+    <script src="world.js"></script>
+</body>
+</html>
