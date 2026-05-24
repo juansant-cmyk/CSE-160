@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 4 Lighting</title>
+</head>
+
+<body onload="main()">
+  <canvas id="webgl" width="800" height="600">
+    Please use a browser that supports canvas.
+  </canvas>
+
+  <p>
+    Camera Angle:
+    <input type="range" min="-180" max="180" value="0" id="angleSlide">
+  </p>
+  <p>
+    Light X:
+    <input type="range" min="-4" max="4" value="0" step="0.1" id="lightSlideX">
+  </p>
+
+  <p>
+    Light Y:
+    <input type="range" min="0" max="5" value="2.5" step="0.1" id="lightSlideY">
+  </p>
+
+  <p>
+    Light Z:
+    <input type="range" min="-4" max="4" value="2" step="0.1" id="lightSlideZ">
+  </p>
+  <p>
+    <button id="lightOn">Light ON</button>
+    <button id="lightOff">Light OFF</button>
+  </p>
+
+  <p>
+    <button id="normalOn">Normal ON</button>
+    <button id="normalOff">Normal OFF</button>
+  </p>
+
+  <p>
+    <button id="spotLightOn">Spotlight ON</button>
+    <button id="spotLightOff">Spotlight OFF</button>
+  </p>
+
+  <p>
+    <button id="lightAnimOn">Light Animation ON</button>
+    <button id="lightAnimOff">Light Animation OFF</button>
+  </p>  
+
+  <p>
+    Light Red:
+    <input type="range" min="0" max="1" step="0.01" value="1" id="lightRed">
+  </p>
+
+  <p>
+    Light Green:
+    <input type="range" min="0" max="1" step="0.01" value="1" id="lightGreen">
+  </p>
+
+  <p>
+    Light Blue:
+    <input type="range" min="0" max="1" step="0.01" value="1" id="lightBlue">
+  </p>
+
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix.js"></script>
+
+  <script src="Cube.js"></script>
+  <script src="Sphere.js"></script>
+  <script src="Model.js"> </script>
+  <script src="Turtle.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
